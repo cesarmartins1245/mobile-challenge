@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mobile_challenge/pages/home/adapters/home_buttom.dart';
+import 'package:mobile_challenge/pages/work_orders/work_orders_page.dart';
+import 'package:mobile_challenge/routes/app_routes.dart';
 import 'package:mobile_challenge/util/constants.dart';
 
 class HomePage extends StatelessWidget {
@@ -21,10 +23,28 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
-            HomeButton('Work Orders', 'assets/icons/edit_square.svg'),
-            HomeButton('Assets', 'assets/icons/assets.svg'),
-            HomeButton('QR Code', 'assets/icons/qr.svg'),
+          children: [
+            HomeButton(
+              text: 'Work Orders',
+              iconPath: 'assets/icons/edit_square.svg',
+              onPressed: () {
+                Get.toNamed(Routes.WORKORDERS);
+              },
+            ),
+            HomeButton(
+              text: 'Assets',
+              iconPath: 'assets/icons/assets.svg',
+              onPressed: () {
+                Get.toNamed(Routes.WORKORDERS);
+              },
+            ),
+            HomeButton(
+              text: 'QR Code',
+              iconPath: 'assets/icons/qr.svg',
+              onPressed: () {
+                Get.toNamed(Routes.WORKORDERS);
+              },
+            ),
           ],
         ),
       ),

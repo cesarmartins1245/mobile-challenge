@@ -4,14 +4,18 @@ import 'package:flutter_svg/flutter_svg.dart';
 class HomeButton extends StatelessWidget {
   final String text;
   final String iconPath;
-  const HomeButton(this.text, this.iconPath, {super.key});
+  final Function()? onPressed;
+
+  const HomeButton(
+      {Key? key, required this.text, required this.iconPath, this.onPressed})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 16),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           minimumSize: const Size.fromHeight(80),
           shape: RoundedRectangleBorder(

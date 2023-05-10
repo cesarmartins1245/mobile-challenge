@@ -28,6 +28,7 @@ flutter:
   - assets/icons/edit_square.svg
   - assets/icons/assets.svg
   - assets/icons/qr.svg
+  - assets/icons/document.svg
 
   uses-material-design: true
 
