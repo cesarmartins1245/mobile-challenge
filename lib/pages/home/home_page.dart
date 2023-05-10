@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mobile_challenge/pages/home/adapters/home_buttom.dart';
 import 'package:mobile_challenge/util/constants.dart';
 
 class HomePage extends StatelessWidget {
@@ -17,28 +18,13 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(vertical: 16),
-              child: ElevatedButton(
-                child: Row(
-                  children: const [
-                    Icon(Icons.edit),
-                    Text('Work Orders'),
-                  ],
-                ),
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size.fromHeight(50),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                ),
-              ),
-            )
+          children: const [
+            HomeButton('Work Orders', 'assets/icons/edit_square.svg'),
+            HomeButton('Assets', 'assets/icons/assets.svg'),
+            HomeButton('QR Code', 'assets/icons/qr.svg'),
           ],
         ),
       ),
